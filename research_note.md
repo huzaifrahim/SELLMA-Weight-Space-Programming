@@ -1,7 +1,7 @@
 # Weight-Space Programming: Investigating Targeted Parameter Editing for Swedish Language Modelling
 
 **Candidate:** Huzaif Rahim  
-**Position:** AI Infrastructure Application Expert (SE.LLMA)  
+**Position:** AI Infrastructure Application Expert (SELLMA)  
 **Institution:** Linköping University  
 **Date:** 19 November 2026
 
@@ -167,7 +167,7 @@ ChatGPT was used as a research and coding assistant to support experimental desi
 
 The Python experiment was executed locally by the candidate. The numerical results reported here were obtained from the execution outputs and saved experiment files.
 
-The candidate reviewed the methodology, experimental results and scientific interpretation. No unexecuted experiments or fabricated measurements are presented.
+The candidate reviewed the methodology, experimental results and scientific interpretation.
 
 ## References
 
