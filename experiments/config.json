@@ -1,0 +1,34 @@
+{
+  "project": "SELLMA Weight-Space Programming",
+  "experiment": "Pilot study of targeted output-bias editing",
+  "random_seed": 42,
+  "languages": ["Swedish", "English"],
+  "model": {
+    "architecture": "linear character-context softmax model",
+    "context_length": 3,
+    "training_epochs": 300,
+    "learning_rate": 0.15
+  },
+  "data": {
+    "source": "data/corpus.json",
+    "sentences_per_language": 10,
+    "split": {
+      "training": 0.6,
+      "validation": 0.2,
+      "test": 0.2
+    }
+  },
+  "intervention": {
+    "type": "targeted output-bias edit",
+    "target_characters": ["å", "ä", "ö"],
+    "selection": "validation cross-entropy",
+    "alpha_candidates": [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0]
+  },
+  "evaluation": [
+    "next-character accuracy",
+    "cross-entropy",
+    "Swedish diacritic recall",
+    "English regression check"
+  ],
+  "conditions": ["baseline", "targeted_edit", "random_edit"]
+}

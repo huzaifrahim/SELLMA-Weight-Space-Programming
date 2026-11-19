@@ -1,0 +1,66 @@
+{
+  "experiment": "Pilot: targeted output-bias editing",
+  "seed": 42,
+  "architecture": "linear character-context softmax model",
+  "context_length": 3,
+  "epochs": 300,
+  "vocabulary_size": 32,
+  "training_sentences_per_language": {
+    "Swedish": 6,
+    "English": 6
+  },
+  "validation_sentences_per_language": {
+    "Swedish": 2,
+    "English": 2
+  },
+  "test_sentences_per_language": {
+    "Swedish": 2,
+    "English": 2
+  },
+  "targeted_edit_alpha": 1.2000000000000002,
+  "targeted_edit_l2_norm": 2.078460969082653,
+  "conditions": {
+    "baseline": {
+      "Swedish": {
+        "characters": 111,
+        "next_character_accuracy": 0.21621621621621623,
+        "cross_entropy": 2.872103708642922,
+        "swedish_diacritic_recall": 0.0
+      },
+      "English": {
+        "characters": 106,
+        "next_character_accuracy": 0.20754716981132076,
+        "cross_entropy": 2.6282427820574057,
+        "swedish_diacritic_recall": null
+      }
+    },
+    "targeted_edit": {
+      "Swedish": {
+        "characters": 111,
+        "next_character_accuracy": 0.21621621621621623,
+        "cross_entropy": 2.8034032252811216,
+        "swedish_diacritic_recall": 0.0
+      },
+      "English": {
+        "characters": 106,
+        "next_character_accuracy": 0.20754716981132076,
+        "cross_entropy": 2.667179230198712,
+        "swedish_diacritic_recall": null
+      }
+    },
+    "random_edit": {
+      "Swedish": {
+        "characters": 111,
+        "next_character_accuracy": 0.25225225225225223,
+        "cross_entropy": 2.9163177260161333,
+        "swedish_diacritic_recall": 0.0
+      },
+      "English": {
+        "characters": 106,
+        "next_character_accuracy": 0.2169811320754717,
+        "cross_entropy": 2.6326866426744298,
+        "swedish_diacritic_recall": null
+      }
+    }
+  }
+}
